@@ -30,10 +30,7 @@ inquirer.
             type:"input",
             message:"Please enter your e-mail",
             name:"e-mail"
-        },
-        
-            
-        
+        },        
 
     ])
 
@@ -41,7 +38,7 @@ inquirer.
 .then (function(response){
     console.log(response.title)
     switch (response.title){
-        //If engineer, ask for git hub address
+ //If engineer, ask for git hub address
         case "Engineer":
         inquirer.
         prompt([
@@ -58,18 +55,21 @@ inquirer.
         inquirer.
         prompt([
             {
-                type:"type",
+                type:"input",
                 name:"officeNum",
                 message:"What is your office number?"
             },
             
-        ])
+        ]);
+
+        break;
+
         case "Intern":
             inquirer.prompt([
                 {
                     type:"input",
                     name:"school",
-                    Message:"What school did you got to?"
+                    message:"What school did you got to?"
                 }
             ])
     }
