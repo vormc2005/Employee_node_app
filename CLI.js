@@ -8,9 +8,10 @@ inquirer.
     prompt([
 
         {
-            type:"input",
-            message:"Please enter title",
-            name:"title"
+            type:"list",
+            message:"Please choose a title",
+            name:"title",
+            choices: ["Engineer", "Manager", "Intern"]
 
         },
         {
@@ -29,9 +30,17 @@ inquirer.
             type:"input",
             message:"Please enter your e-mail",
             name:"e-mail"
-        }
+        },
+        
+            
+        
 
-    ]);
+    ])
+
+// get reponses and filter them 
+.then (function(response){
+
+});
 
     getRole = () =>{
 
