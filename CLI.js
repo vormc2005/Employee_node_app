@@ -1,8 +1,12 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 
 // Collecting information about employee//
+function getEmployeeInfo(){
 
 inquirer.
     prompt([
@@ -17,7 +21,7 @@ inquirer.
         {
             type:"input",
             message:"Name",
-            name:"Person_name"
+            name:"name"
         },
         {
             type: "input",
@@ -29,14 +33,22 @@ inquirer.
         {
             type:"input",
             message:"Please enter your e-mail",
-            name:"e-mail"
+            name:"e_mail"
         },        
 
     ])
 
 // get reponses and filter them 
 .then (function(response){
-    console.log(response.title)
+    console.log(response.title);
+    console.log(response.name);
+    console.log(response.ID);
+    console.log(response.e_mail);
+
+    // var employee = new employee(response.title, response.name, response.ID, response.e_mail);
+    // console.log(employee);
+
+
     switch (response.title){
  //If engineer, ask for git hub address
         case "Engineer":
@@ -46,8 +58,24 @@ inquirer.
             type:"input",
             name: "gitHub",
             message:"What is your gitHub Address?"
-            },
-        ])
+            }
+        ]).then(response => {//Rsponse from inquirer
+        
+        console.log(response.gitHub);
+
+        // const engineer = new engineer(response.title, response.name, response.ID, response.e_mail, response.gitHub);
+        // console.log(engineer[i])
+            // building a object with information from inquirer
+
+            const EngineerObj = [
+                `Team`,
+                "_"/repeat(60),
+                `Title: ${engineer.getRole()}`,
+
+
+            ]
+            console.log(EngineerObj)
+        })
 
     break;
 
@@ -75,11 +103,17 @@ inquirer.
     }
 });
 
+}
+
+getEmployeeInfo();
     
 
     
 
-    /**1. Create array/object with emplyees
-     * 2. Got through array and attach names data obtained from the inquirer to the right class
+
+     /* 2. Got through array and attach names data obtained from the inquirer to the right class
+
+     3. Create classes
+     
      * 3. 
      */
