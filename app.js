@@ -77,7 +77,7 @@ const addEngineer = () => {
             },
             {
                 type: "input",
-                name: "e_mail",
+                name: "email",
                 message: "Please type you new engineers' e-mail"
             },
             {
@@ -89,7 +89,7 @@ const addEngineer = () => {
             /**console logging answers */
             // console.log(answer.name);
             // console.log(answer.ID);
-            // console.log(answer.e_mail);
+            // console.log(answer.email);
             // console.log(answer.gitHub)
 
             // Create a new object in the engineer array
@@ -97,7 +97,7 @@ const addEngineer = () => {
             let engineer = new Engineer(
                 answer.name,
                 answer.ID,
-                answer.e_mail,
+                answer.email,
                 answer.gitHub
             );
             //Push new engineer to an array
@@ -109,11 +109,11 @@ const addEngineer = () => {
                 `Title:${engineer.getTitle()}`,
                 `Name:${engineer.getName()}`,
                 `ID:${engineer.getId()}`,
-                `E-mail:${engineer.getEmail()}`,
+                `E-mail:${engineer.getEmail()}`, /**does not print to log.txt */
                 `GitHub ID:${engineer.getGithub()}`,
                 "-".repeat(60),
-                ].join 
-                ("\n");
+                ""
+                ].join("\n");
 
                 fs.appendFile("log.txt.", engineerText, err =>{
                     if(err)
@@ -162,7 +162,7 @@ const addIntern = () => {
             },
             {
                 type: "input",
-                name: "e_mail",
+                name: "email",
                 message: "Please type you new Interns' e-mail"
             },
             {
@@ -175,7 +175,7 @@ const addIntern = () => {
             /**console logging answers */
             // console.log(answer.name);
             // console.log(answer.ID);
-            // console.log(answer.e_mail);
+            // console.log(answer.email);
             // console.log(answer.school)
 
             // Create a new object in the engineer array
@@ -183,7 +183,7 @@ const addIntern = () => {
             let intern = new Intern(
                 answer.name,
                 answer.ID,
-                answer.e_mail,
+                answer.email,
                 answer.school
             );
             //Push new engineer to an array
@@ -195,11 +195,11 @@ const addIntern = () => {
                 `Title:${intern.getTitle()}`,
                 `Name:${intern.getName()}`,
                 `ID:${intern.getId()}`,
-                `E-mail:${intern.getEmail()}`,
+                `E-mail:${intern.getEmail()}`,/**does not print to email */
                 `School:${intern.getSchool()}`,
                 "-".repeat(60),
-                ].join 
-                ("\n");
+                ""
+                ].join ("\n");
 
                 fs.appendFile("log.txt.", internText, err =>{
                     if(err)
@@ -230,7 +230,7 @@ const addManager = () => {
             },
             {
                 type: "input",
-                name: "e_mail",
+                name: "email",
                 message: "Please type you new Interns' e-mail"
             },
             {
@@ -245,7 +245,7 @@ const addManager = () => {
 
             // console.log(answer.name);
             // console.log(answer.ID);
-            // console.log(answer.e_mail);
+            // console.log(answer.email);
             // console.log(answer.officeNum)
 
             // Create a new object in the engineer array
@@ -253,7 +253,7 @@ const addManager = () => {
             let manager = new Manager(
                 answer.name,
                 answer.ID,
-                answer.e_mail,
+                answer.email,
                 answer.officeNum
             );
             //Push new manager to an array
@@ -265,11 +265,11 @@ const addManager = () => {
                 `Title:${manager.getTitle()}`,
                 `Name:${manager.getName()}`,
                 `ID:${manager.getId()}`,
-                `E-mail:${manager.getEmail()}`,
+                `E-mail:${manager.getEmail()}`,/**Does not print to log.txt */
                 `Office number:${manager.getofficeNum()}`,
                 "-".repeat(60),
-                ].join 
-                ("\n");
+                ""
+                ].join("\n");
 
                 fs.appendFile("log.txt.", managerText, err =>{
                     if(err)
