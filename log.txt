@@ -1,8 +1,24 @@
 Team
 ------------------------------------------------------------
+Title:Manager
+Name:Dmitry Voronov
+ID:001
+E-mail:voronov.dmitry@gmail.com
+Office number:01
+------------------------------------------------------------
+Team
+------------------------------------------------------------
 Title:Engineer
-Name:nsghs
-ID:df
-E-mail:
-GitHub ID:
+Name:John Travolta
+ID:002
+E-mail:JT@gmail.com
+GitHub ID:JT2005
+------------------------------------------------------------
+Team
+------------------------------------------------------------
+Title:Intern
+Name:Bill Gates
+ID:003
+E-mail:BG@aol.com
+School:GMU
 ------------------------------------------------------------
