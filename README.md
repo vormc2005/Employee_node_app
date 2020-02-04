@@ -8,3 +8,8 @@ After user selescts who they want to add he/she is asked a fe questions about pe
 At the end Employee_node_app will generate a text file with team members typed on it.
 
 ![](Employee.gif)
+
+
+Below developer cunducted testing of all of the functions that we used in classes.
+
+![](Test_gif.gif)
